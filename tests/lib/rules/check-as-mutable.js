@@ -23,11 +23,14 @@ ruleTester.run("check-as-mutable", rule, {
     valid: [
 
         // give me some code that won't trigger a warning
+    //    {
+    //     code: 'var a = b.c;',
+    //    }
     ],
 
     invalid: [
         {
-            code: "var mutableArray = Immutable([&#34;hello&#34;, &#34;world&#34;]).asMutable();",
+            code: "var mutableArray = Immutable().asMutable();",
             errors: [{
                 message: "Fill me in.",
                 type: "Me too"
